@@ -4,7 +4,27 @@ include("header.php");
 
 	$sql="select * from items LEFT  JOIN category ON i_category = c_id";
 	$query=mysqli_query($conn,$sql);
+$results_per_page = 9;
+
+$number_of_results=mysqli_num_rows($query);
+// defining number of pages
+$number_of_pages = ceil($number_of_results / $results_per_page);
+// determine which page number the visitor is currently on
+if (!isset($_GET['page'])) {
+    $page = 1;
+} else {
+
+    $page = $_GET['page'];
+}
+//sql limit of the starting  number for the results on the display image
+
+ $this_page_first_result = ($page - 1) * $results_per_page;
+
+
+$sql="select * from items LEFT  JOIN category ON i_category = c_id  LIMIT " .$this_page_first_result . ',' . $results_per_page;
+$query=mysqli_query($conn,$sql)
 ?>
+
 
 <div class="body">
     <header>
@@ -53,28 +73,41 @@ include("header.php");
 
       <!-- Prduct -->
       <h1 class="my-4">Welcome.</h1>
-      
+        <p><?=$number_of_results?> Products</p>
       <!-- start Product Iteam -->
       <div class="row">
         <!-- iteam 1-->
 		  
 <?php  
-	while($result=mysqli_fetch_row($query))
-	{
-	echo "
+	while($result=mysqli_fetch_array($query))
+	{?>
 	<div class='col-lg-4 col-sm-6 portfolio-item'>
-          <a href='#'><div class='card h-80'> <img class='card-img-top' src='img/$result[4]' alt=''></a>
+
+    <form method="get" action="index.php?id=<?=$result['i_id']?>">
+    <div class='card h-80'> <img class='card-img-top' src='img/<?=$result['i_img'] ?>' alt=''></a>
             <div class='card-body'>
               <h5 class='card-title'>
-                <a href='#'>$result[1]</a>
               </h5>
-              <p class='card-text' >Category : <span class='card-Category'>$result[7]</span> </p>
-              <p class='card-text'>Price : <span class='card-price'>$result[3] $</span> </p>
+              <p class='card-text' >Category : <span class='card-Category'><?=$result['i_category']?></span> </p>
+              <p class='card-text'>Price : <span class='card-price'><?= number_format($result['i_price'],2);?></span> </p>
 			</div>
           </div>
-        </div>";
+          </form>
+        </div>
+          <?php
 	}
- ?>
+// displaying the links to the pages
+for ($page = 1; $page <= $number_of_pages; $page++) {
+
+    echo '
+<div>
+</div>
+<ul  class="pagination"><li><a  href="index.php?page=' . $page . '">' . $page . '</a></li></ul>';
+
+}
+
+?>
+
         </div>
       <!-- /.row -->
 

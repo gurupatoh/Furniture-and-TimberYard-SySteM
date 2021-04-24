@@ -41,30 +41,26 @@ $query=mysqli_query($conn,$sql);
       <!-- Content Row -->
       <div class="row">
         <!-- Map Column -->
-               <div class="col-lg-8 mb-4">
-          <!-- Embedded Google Map -->
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13305.724382899301!2d36.279173222228984!3d33.51617566099691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1518e0b3084fffff%3A0x1529edace12e4a02!2z2KfZhNiz2YrZgSDYp9mE2K_Zhdi02YLZiiAtIFRoZSBEYW1hc2N1cyBTd29yZA!5e0!3m2!1sen!2s!4v1545160350260" 
-               width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </div>
+          <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=westland%20nairobi&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://putlocker-is.org"></a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style><a href="https://www.embedgooglemap.net">google map location for website</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div></div>
 
         <!-- Contact Details Column -->
         <div class="col-lg-4 mb-4">
           <h3>Contact Details</h3>
           <p>
-            Damascus , Syria
-            <br>Beverly Hills, CA 90210
+            westlands  , Nairobi
+            <br>Parklands street, NB 90210
             <br>
           </p>
           <p>
-            <abbr title="Phone">P</abbr>: (+963) 9661-9881
+            <abbr title="Phone">Phone</abbr>: (+254)71245678
           </p>
           <p>
-            <abbr title="Email">E</abbr>:
-            <a href="mailto:name@example.com">name@example.com
+            <abbr title="Email">Email</abbr>:
+            <a href="mailto:name@example.com">FurnitureTimberyaard@example.com
             </a>
           </p>
           <p>
-            <abbr title="Hours">H</abbr>: Saturday - Friday: 9:00 AM to 6:00 PM
+            <abbr title="Hours">open Hours</abbr>: Saturday - Friday: 9:00 AM to 6:00 PM
           </p>
         </div>
       </div>
