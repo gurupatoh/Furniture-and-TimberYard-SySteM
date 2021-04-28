@@ -36,15 +36,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="../about.php">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../services.php">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../contact.php">Contact</a>
-            </li>
+
             <li class="nav-item">
               <a class="nav-link" href="addCategory.php">Add Category</a>
             </li>
@@ -54,6 +46,9 @@
             <li class="nav-item">
               <a class="nav-link" href="feedback.php">Notification</a>
             </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="order.php">orders</a>
+              </li>
             <li class="nav-item">
               <a class="nav-link" href="logout.php">logOut</a>
             </li>
