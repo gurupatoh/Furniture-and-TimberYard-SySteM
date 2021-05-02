@@ -241,12 +241,21 @@ $query=mysqli_query($conn,$sql)
         </tr>
 
 
-
         </tbody>
+
         <?php
         endif;
         ?>
     </table>
+<p align="right">
+    <a  href="payment.php"> <button class="btn btn-success"> pay </button></a>
+
+</p>
+
+
+
+
+
 </div>
 <?php
 include("footer.php");
